@@ -8,20 +8,11 @@ public class SeMonsterGame {
   HashMap<String, Player> playerMap = new HashMap<>();
   LinkedList<Integer> randomNumberList = new LinkedList<Integer>();
 
-  /**
-   * 0~4までの値がランダムに一定数格納されたLinkedLIst
-   *
-   * @param randomNumberList
-   */
+
   SeMonsterGame(LinkedList<Integer> randomNumberList) {
     this.randomNumberList = randomNumberList;
   }
 
-  /**
-   * プレイヤーを追加
-   *
-   * @param playerName
-   */
   void addPlayer(String playerName) {
     this.playerMap.put(playerName, new Player(randomNumberList, playerName));
   }
